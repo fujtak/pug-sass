@@ -1,0 +1,14 @@
+
+.rating-display {
+  display: flex;
+
+  > .item {
+    color: #fff;
+    text-shadow: 0 0 1px #000;
+
+    &.-active {
+      color: gold;
+    }
+  }
+
+}

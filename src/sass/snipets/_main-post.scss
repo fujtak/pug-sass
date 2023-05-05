@@ -1,0 +1,82 @@
+
+@use "../global" as *;
+
+.main-post {
+  max-width: 500px;
+  margin-inline: auto;
+
+  > .container {
+    padding: {
+      top: $default-top-space;
+      bottom: $default-bottom-space;
+      left: $default-side-space;
+      right: $default-side-space;
+    };
+
+    > .top {
+      padding: {
+        top: 1em;
+        bottom: 1em;
+        left: 16px;
+        right: 16px;
+      };
+      border-radius: 8px;
+      background-color: #fff;
+
+      > .main {
+        padding: {
+          top: 0.5em;
+          bottom: 0.5em;
+        };
+      }
+
+      > .caution {
+        color: red;
+        margin-top: 0.5em;
+      }
+      
+    }
+
+    > .form { 
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+      margin-top: 0.5em;
+
+      & .necessary {
+        color: red;
+      }
+
+      > .item {
+        padding: {
+          top: 1em;
+          bottom: 1em;
+          left: 16px;
+          right: 16px;
+        };
+        border-radius: 8px;
+        background-color: #fff;
+
+        > .selectedInputs {
+          > .label {
+            margin-top: 0.5em;
+          }
+        }
+      }
+
+      > label {
+        &[aria-hidden="true"] {
+          opacity: 0.5;
+          text-decoration-line: line-through;
+          display: none;
+        }
+      }
+
+      > .submit {
+        margin-inline: auto;
+      }
+
+    }
+
+  }
+}

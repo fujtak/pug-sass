@@ -1,0 +1,42 @@
+
+@use "../global" as *;
+
+.detail-group {
+  padding: {
+    top: 1.8em;
+    bottom: 2em;
+    left: $default-side-space;
+    right: $default-side-space;
+  };
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  > .descWrapper {
+
+    > .desc {
+      line-height: 1.5;
+
+      &:not(:first-child) {
+        margin-top: 0.5em;
+      }
+    }
+
+  }
+
+  > .infoList {
+    margin-top: 2em;
+
+    > .item {
+      &:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      > .title {
+        line-height: 1.5;
+      }
+    }
+  }
+
+}

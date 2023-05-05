@@ -1,0 +1,25 @@
+
+@use "../../global" as *;
+
+.secondary-heading {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background-color: #000;
+  }
+
+  &.-lv1 {
+    font-size: $fontsize-lv1;
+  }
+  &.-lv2 {
+    font-size: $fontsize-lv2;
+  }
+
+}

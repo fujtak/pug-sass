@@ -1,0 +1,105 @@
+
+@use "../global" as *;
+
+.add-comment {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: calc(100% - 32px);
+   max-width: calc(500px - 32px);
+   border-radius: 8px;
+   background-color: #fff;
+   @include z-index(add-comment);
+
+   &[aria-hidden="true"] {
+    display: none;
+   }
+
+   > .container {
+    padding: 32px;
+
+    > .head {
+      display: flex;
+      position: relative;
+
+      > .close {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      > .spotName {
+        width: fit-content;
+        margin-inline: auto;
+        font-size: $fontsize-lv2;
+      }
+
+    }
+
+    > .form {
+      margin-top: 0.5em;
+
+      > .content {
+        padding: {
+          top: 0.5em;
+          bottom: 0.5em;
+        };
+
+        > .head {
+          display: flex;
+
+          > .icon {
+            border-radius: 50%;
+          }
+
+          > .name {
+            margin-left: 0.5em;
+          }
+
+        }
+
+        > .rating {
+          width: fit-content;
+          margin-top: 0.3em;
+
+          > .radio {
+            font-size: 28px;
+
+            &:not(:first-of-type) {
+              margin-left: 16px;
+            }
+          }
+        }
+
+        > .textInput {
+          margin-top: 0.5em;
+          width: 100%;
+        }
+
+      }
+
+      > .submit {
+        margin-top: 0.5em;
+        width: fit-content;
+        margin-inline: auto;
+      }
+
+    }
+   }
+}
+
+.addComment-mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($color: #000, $alpha: 0.5);
+  @include z-index(addComment-mask);
+
+  &[aria-hidden="true"] {
+    display: none;
+   }
+}

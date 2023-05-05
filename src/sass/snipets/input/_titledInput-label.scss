@@ -1,0 +1,15 @@
+
+@use "./../../global" as *;
+
+.titledInput-label {
+
+   > .title {
+      font-weight: bold;
+      margin-bottom: 0.1em;
+   }
+
+   > .input {
+      width: 100%;
+   }
+   
+}

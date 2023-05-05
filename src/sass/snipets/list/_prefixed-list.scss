@@ -1,0 +1,65 @@
+
+@use "../../global" as *;
+
+.prefixed-list {
+
+  > .item {
+    position: relative;
+
+    > .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+  }
+
+  &.-primary {
+
+    > .item {
+      padding: {
+        top: 0.5em;
+        bottom: 0.5em;
+        left: 3em;
+        right: 2em;
+      };
+  
+      > .icon {
+        top: 50%;
+        left: 1em;
+        transform: translateY(-50%);
+
+        &.-small {
+          left: 1.23em;
+        }
+
+      }
+    }
+  }
+
+  &.-secondary {
+
+    > .item {
+      padding: {
+        left: 1.9em
+      };
+  
+      > .icon {
+          top: pxToRem(5px);
+          left: 0;
+          
+        &.-small {
+          left: 0.2em;
+        }
+
+      }
+    }
+  }
+
+  &.-accent {
+    > .item {
+      border: pxToRem(1px) solid #ddd;
+    }
+  }
+
+}

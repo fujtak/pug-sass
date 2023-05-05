@@ -1,0 +1,27 @@
+
+@use "../../global" as *;
+
+.search-form {
+  position: relative;
+
+  > .label {
+    width: 100%;
+
+    > .icon {
+      position: absolute;
+      top: 50%;
+      left: pxToRem(13px);
+      transform: translateY(-50%);
+      color: #aaa;
+
+      &[aria-hidden="true"] {
+        display: none;
+      }
+    }
+
+    > .input {
+      width: 100%;
+    }
+    
+  }
+}

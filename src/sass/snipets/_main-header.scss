@@ -1,0 +1,126 @@
+
+@use "../global" as *;
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: $main-color;
+  @include z-index(main-header);
+
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: {
+      top: 0.25em;
+      bottom: 0.25em;
+      left: $default-side-space;
+      right: $default-side-space;
+    };
+
+    > .gnavTrigger {
+      width: fit-content;
+      height: fit-content;
+      font-size: pxToRem(28px);
+      @include media-max(s) {
+        font-size: pxToRem(24px);
+      }
+    }
+
+    > .heading {
+      width: fit-content;
+      font-size: pxToRem(28px);
+      padding: {
+        top: 1em;
+        bottom: 1em;
+      };
+      @include media-max(s) {
+        font-size: pxToRem(24px);
+        padding: {
+          top: 0.5em;
+          bottom: 0.5em;
+        };
+      }
+    }
+
+    > .searchOpener {
+      width: fit-content;
+      height: fit-content;
+      font-size: pxToRem(28px);
+      @include media-max(s) {
+        font-size: pxToRem(24px);
+      }
+
+      &[aria-hidden="true"] {
+        display: none;
+      }
+
+    }
+
+    > .searchForm {
+      width: 50%;
+      min-width: pxToRem(200px);
+      max-width: pxToRem(500px);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &[aria-hidden="true"] {
+        display: none;
+      }
+    }
+
+    > .searchCloser {
+      width: fit-content;
+      height: fit-content;
+      font-size: pxToRem(24px);
+      &[aria-hidden="true"] {
+        display: none;
+      }
+    }
+
+  }
+
+  > .gNav {
+    width: 30%;
+    min-width: pxToRem(200px);
+    max-width: pxToRem(400px);
+    min-height: 100vh;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 1em;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background-color: #fff;
+    transition: 0.3s;
+    @include z-index(gNav);
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &[aria-hidden="true"] {
+      transform: translateX(-100%);
+    }
+  }
+
+  > .searchResult {
+    width: 70%;
+    min-width: pxToRem(250px);
+    max-width: pxToRem(550px);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    @include z-index(searchResult);
+
+    &[aria-hidden="true"] {
+      display: none;
+    }
+
+  }
+
+}

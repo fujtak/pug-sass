@@ -1,0 +1,17 @@
+
+@use "../../global" as *;
+
+.main-heading {
+
+  &.-lv1 {
+    font-size: $fontsize-lv1;
+  }
+  &.-lv2 {
+    font-size: $fontsize-lv2;
+  }
+
+  &.-brand {
+    font-family: 'Russo One', sans-serif;
+  }
+  
+}

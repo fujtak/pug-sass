@@ -1,0 +1,59 @@
+
+@use "../../global" as *;
+
+.prefixed-linkList {
+  background-color: #fff;
+
+  > li {
+    position: relative;
+
+    > a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+
+      > .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+    }
+  }
+
+  &.-primary {
+
+    > li {
+
+      > a {
+        padding: {
+          top: 0.75em;
+          bottom: 0.75em;
+          left: 3em;
+          right: 2em;
+        };
+    
+        > .icon {
+
+          &.-center {
+            top: 50%;
+            left: 1em;
+            transform: translateY(-50%);
+          }
+          &.-small {
+            left: 1.2em;
+          }
+
+        }
+
+      } 
+    }
+  }
+
+  &.-accent {
+    > li {
+      border: pxToRem(1px) solid #ddd;
+    }
+  }
+
+}

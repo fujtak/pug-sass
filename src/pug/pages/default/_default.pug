@@ -1,0 +1,13 @@
+//- 全てのpageファイルの継承元
+block variables
+doctype html
+html(lang="ja")
+  head
+    include head/_meta
+    title #{title}
+    include head/_stylesheet
+  body.page-wrapper
+    block header
+    block main
+    block footer
+    block script

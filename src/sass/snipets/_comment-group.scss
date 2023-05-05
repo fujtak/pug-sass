@@ -1,0 +1,15 @@
+
+.comment-group {
+  padding: {
+    top: 1.5em;
+    bottom: 2em;
+  };
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  > .addTrigger {
+    margin-inline: auto;
+    margin-bottom: 1em;
+  }
+}

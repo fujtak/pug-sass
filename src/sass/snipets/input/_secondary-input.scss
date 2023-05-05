@@ -1,0 +1,15 @@
+
+@use "../../global" as *;
+
+.secondary-input {
+  position: relative;
+  padding: 0.5em;
+  line-height: 1.5;
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+
+  &:focus {
+    outline: none;
+    border-bottom: 2px solid $main-color-dark;
+  }
+}

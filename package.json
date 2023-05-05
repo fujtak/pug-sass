@@ -1,0 +1,27 @@
+{
+  "name": "scripts-pug",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npm run compile:pug && npm run compile:sass",
+    "compile:pug": "pug src/pug/pages/*.pug --out src --obj src/pug/data.json --pretty",
+    "compile:sass": "sass src/sass/style.scss:src/assets/css/style.css --source-map-urls=relative --style=expanded",
+    "watch": "npm run watch:pug & npm run watch:sass",
+    "watch:pug": "pug src/pug/pages/*.pug --out src --obj src/pug/data.json --pretty --watch",
+    "watch:sass": "sass src/sass/style.scss:src/assets/css/style.css --source-map-urls=relative --style=expanded --watch",
+    "build": "npm run build:pug && npm run build:sass",
+    "build:pug": "pug src/pug/pages/*.pug --out public --obj src/pug/data.json",
+    "build:sass": "sass src/sass/style.scss:public/assets/css/style.css --source-map-urls=relative --style=compressed",
+    "cp2repo": "cp src/*.html repo && cp -R src/assets repo",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.55.0"
+  }
+}

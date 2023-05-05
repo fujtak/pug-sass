@@ -1,0 +1,17 @@
+
+.rating-select {
+  display: flex;
+
+  > .radio {
+    color: #fff;
+
+    &.-active {
+      color: gold;
+    }
+
+    > .icon {
+      text-shadow: 0 0 1px #000;
+    }
+
+  }
+}

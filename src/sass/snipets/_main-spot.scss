@@ -1,0 +1,26 @@
+
+@use "../global" as *;
+
+.main-spot {
+
+  > .container {
+    // スライダーのimgのwidthに合わせる
+    max-width: 500px;
+    margin-inline: auto;
+    background-color: #fff;
+
+    > .sliderGroup {
+      width: 100%;
+    }
+
+    > .spotName {
+      width: fit-content;
+      margin-inline: auto;
+      padding: {
+        top: 1em;
+        bottom: 1em;
+      };
+    }
+
+  }
+}
